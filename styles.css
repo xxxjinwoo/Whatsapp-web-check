@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #25D366;
+    --dark-color: #0B141A;
+    --light-color: #F0F2F5;
+    --danger-color: #E74C3C;
+    --warning-color: #F39C12;
+    --success-color: #27AE60;
+    --text-color: #303030;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+    min-height: 100vh;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+    padding-top: 40px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.main-content {
+    flex: 1;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.check-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.check-section h2 {
+    color: var(--dark-color);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.phone-input {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #E8E8E8;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.phone-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.1);
+}
+
+.check-btn {
+    padding: 15px 40px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #20B85D 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.check-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.check-btn:active {
+    transform: translateY(0);
+}
+
+small {
+    color: #666;
+    display: block;
+}
+
+.result-section {
+    background: #F8F9FA;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--primary-color);
+}
+
+.result-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.result-icon {
+    font-size: 3rem;
+    min-width: 60px;
+}
+
+.result-text h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.status-active {
+    border-left-color: var(--success-color);
+    background: #D5F4E6;
+}
+
+.status-active .result-icon {
+    color: var(--success-color);
+}
+
+.status-banned {
+    border-left-color: var(--danger-color);
+    background: #FADBD8;
+}
+
+.status-banned .result-icon {
+    color: var(--danger-color);
+}
+
+.status-warning {
+    border-left-color: var(--warning-color);
+    background: #FCF3CF;
+}
+
+.status-warning .result-icon {
+    color: var(--warning-color);
+}
+
+.info-section, .faq-section {
+    margin-bottom: 30px;
+}
+
+.info-section h3, .faq-section h3 {
+    color: var(--dark-color);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.info-section ul {
+    list-style: none;
+    background: #F8F9FA;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.info-section li {
+    padding: 10px 0;
+    border-bottom: 1px solid #E8E8E8;
+    display: flex;
+    align-items: center;
+}
+
+.info-section li:last-child {
+    border-bottom: none;
+}
+
+.info-section li:before {
+    content: "✓";
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.faq-item {
+    background: #F8F9FA;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    opacity: 0.8;
+}
+
+/* Loading animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(37, 211, 102, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .check-btn {
+        width: 100%;
+    }
+
+    .result-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .result-icon {
+        font-size: 2.5rem;
+    }
+}
