@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Ban Checker - Vérifiez votre statut</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 WhatsApp Ban Checker</h1>
+            <p>Vérifiez si votre numéro WhatsApp est banni</p>
+        </div>
+
+        <div class="main-content">
+            <div class="check-section">
+                <h2>Entrez votre numéro de téléphone</h2>
+                <div class="input-group">
+                    <input 
+                        type="tel" 
+                        id="phoneInput" 
+                        placeholder="+33612345678" 
+                        class="phone-input"
+                    >
+                    <button onclick="checkBan()" class="check-btn">Vérifier</button>
+                </div>
+                <small>Format: +33612345678</small>
+            </div>
+
+            <div id="result" class="result-section" style="display:none;">
+                <div id="resultContent"></div>
+            </div>
+
+            <div class="info-section">
+                <h3>ℹ️ Informations importantes</h3>
+                <ul>
+                    <li>Cette vérification vous aide à identifier les problèmes avec votre compte</li>
+                    <li>Les résultats sont vérifiés en temps réel</li>
+                    <li>Vos données ne sont pas conservées</li>
+                    <li>En cas de ban, contactez le support WhatsApp</li>
+                </ul>
+            </div>
+
+            <div class="faq-section">
+                <h3>❓ Questions fréquentes</h3>
+                <div class="faq-item">
+                    <h4>Pourquoi mon compte est banni ?</h4>
+                    <p>WhatsApp peut bannir les comptes pour violation des conditions d'utilisation.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Comment lever un ban ?</h4>
+                    <p>Contactez le support WhatsApp officiel via l'application ou le site web.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Combien de temps dure un ban ?</h4>
+                    <p>Cela dépend de la raison du ban. Certains bans sont temporaires, d'autres permanents.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 WhatsApp Ban Checker | Non affilié à WhatsApp Inc.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
